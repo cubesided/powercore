@@ -30,10 +30,17 @@ namespace Powercore
             string bg = Powercore.Properties.Settings.Default.background;
             InitializeComponent();
             Application.ApplicationExit += new EventHandler(OnApplicationExit);
+
+            
+
             if (bg == "")
             {
                 GrabDesktopImage();
-            } else
+            } else if (bg == "Off")
+            {
+                // void
+            }
+            else
             {
                 try
                 {

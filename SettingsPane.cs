@@ -19,30 +19,25 @@ namespace Powercore
             InitializeComponent();
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+            panels.defaultPane defaults = new panels.defaultPane();
+
+            defaults.TopLevel = false;
+            defaults.Parent = panel1;
+            defaults.StartPosition = FormStartPosition.CenterParent;
+            defaults.Show();
+            panel1.Controls.Add(defaults);
+            this.Focus();
+        }
+
         private void SettingsPane_Load(object sender, EventArgs e)
         {
-            tabBox.Text = Powercore.Properties.Settings.Default.newTabLocation;
+            label6_Click(label1, e);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Powercore.Properties.Settings.Default.newTabLocation = tabBox.Text;
-            Properties.Settings.Default.Save();
-            Console.WriteLine(Powercore.Properties.Settings.Default.newTabLocation);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (bgBox.Text == null)
-            {
-                Powercore.Properties.Settings.Default.background = " ";
-                Properties.Settings.Default.Save();
-            } else
-            {
-                Powercore.Properties.Settings.Default.background = bgBox.Text;
-                Properties.Settings.Default.Save();
-            }
-            MessageBox.Show("Restart your browser for changes to take effect.");
             Application.Restart();
         }
     }
