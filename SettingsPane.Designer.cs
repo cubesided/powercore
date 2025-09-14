@@ -30,18 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tabBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.bgBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.tab0 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.tab1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -67,78 +61,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Settings (Flags)";
             // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(663, 171);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(72, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "✔";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // tabBox
-            // 
-            this.tabBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabBox.Location = new System.Drawing.Point(414, 173);
-            this.tabBox.Name = "tabBox";
-            this.tabBox.Size = new System.Drawing.Size(234, 20);
-            this.tabBox.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(305, 171);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 21);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "New Tab Page";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(305, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 21);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Browser Background";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(663, 205);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "✔";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // bgBox
-            // 
-            this.bgBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bgBox.Location = new System.Drawing.Point(457, 207);
-            this.bgBox.Name = "bgBox";
-            this.bgBox.Size = new System.Drawing.Size(191, 20);
-            this.bgBox.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(307, 230);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(261, 15);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Empty for desktop background, must be a file path";
-            // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -151,18 +73,18 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Experiments will be added here";
             // 
-            // label6
+            // tab0
             // 
-            this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(55, 106);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 21);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Defaults";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.tab0.AutoSize = true;
+            this.tab0.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tab0.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab0.ForeColor = System.Drawing.Color.Black;
+            this.tab0.Location = new System.Drawing.Point(55, 106);
+            this.tab0.Name = "tab0";
+            this.tab0.Size = new System.Drawing.Size(64, 21);
+            this.tab0.TabIndex = 21;
+            this.tab0.Text = "Defaults";
+            this.tab0.Click += new System.EventHandler(this.label6_Click);
             // 
             // label9
             // 
@@ -195,23 +117,30 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // tab1
+            // 
+            this.tab1.AutoSize = true;
+            this.tab1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tab1.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab1.ForeColor = System.Drawing.Color.Black;
+            this.tab1.Location = new System.Drawing.Point(55, 135);
+            this.tab1.Name = "tab1";
+            this.tab1.Size = new System.Drawing.Size(63, 21);
+            this.tab1.TabIndex = 25;
+            this.tab1.Text = "Browser";
+            this.tab1.Click += new System.EventHandler(this.tab1_Click);
+            // 
             // SettingsPane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 592);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tab1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tab0);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.bgBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.tabBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -230,17 +159,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox tabBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox bgBox;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label tab0;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label tab1;
     }
 }

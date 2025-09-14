@@ -24,9 +24,13 @@ namespace Powercore
     {
 
         bool donttaptheglass = true;
+        LifespanHandler myObject;
         public mainWnd()
         {
             // Initialize Cache
+            // Implement Custom LifeSpanHandler
+            myObject = new LifespanHandler(this);
+
             string bg = Powercore.Properties.Settings.Default.background;
             InitializeComponent();
             Application.ApplicationExit += new EventHandler(OnApplicationExit);
@@ -108,6 +112,10 @@ namespace Powercore
             newTabPage.Controls.Add(webControl);
             webControl.Parent = newTabPage;
 
+            // Implement Custom LifeSpanHandler
+            webControl.LifeSpanHandler = myObject;
+            // End Implement Custom LifeSpanHandler
+
 
             search(Powercore.Properties.Settings.Default.newTabLocation);
 
@@ -184,7 +192,7 @@ namespace Powercore
                 if (given.StartsWith("@/"))
                 {
                     string handle = "@/";
-                    string use = given.Replace(handle, "https://cubesided.github.io/data/");
+                    string use = given.Replace(handle, "https://cubesided.net/data/");
                     use += ".html";
 
                     if (given == "@/powercore/settings") {
@@ -195,6 +203,14 @@ namespace Powercore
                         webControl.Hide();
                         settingsPane.Parent = tabControl1.SelectedTab;
                         settingsPane.Size = tabControl1.SelectedTab.Size;
+                    } else if (given == "@/powercore/about") {
+                        about about = new about();
+                        about.TopLevel = false;
+                        about.Show();
+                        tabControl1.SelectedTab.Controls.Add(about);
+                        webControl.Hide();
+                        about.Parent = tabControl1.SelectedTab;
+                        about.Size = tabControl1.SelectedTab.Size;
                     } else
                     {
                         webControl.LoadUrl(use);
@@ -228,27 +244,31 @@ namespace Powercore
                 webControl.Reload();
         }
 
-        public void AddNewTab(string url)
-        {
-            TabPage newTabPage = new TabPage("New Tab");
-            tabControl1.TabPages.Add(newTabPage);
+        public void AddNewTab(string url) {
+            this.Invoke(new MethodInvoker(() =>
+            {
+                TabPage newTabPage = new TabPage("New Tab");
+                tabControl1.TabPages.Add(newTabPage);
 
-            newTabPage.MouseDoubleClick += NewTabPage_MouseClick;
+                newTabPage.MouseDoubleClick += NewTabPage_MouseClick;
 
-            ChromiumWebBrowser webControl = new ChromiumWebBrowser();
-            tabControl1.SelectTab(tabControl1.TabCount - 1);
-            webControl.Dock = DockStyle.Fill;
-            newTabPage.Controls.Add(webControl);
-            webControl.Parent = newTabPage;
-            webControl.Dock = DockStyle.Fill;
-            webControl.TitleChanged += webControl_TitleChanged;
-            webControl.AddressChanged += webControl_AddressChanged;
-            webControl.KeyDown += webControl_KeyDown;
-            webControl.StatusMessage += webControl_Status;
-            webControl.LoadError += webControl_URLError;
+                ChromiumWebBrowser webControl = new ChromiumWebBrowser();
+                tabControl1.SelectTab(tabControl1.TabCount - 1);
+                webControl.Dock = DockStyle.Fill;
+                newTabPage.Controls.Add(webControl);
+                webControl.Parent = newTabPage;
+                webControl.Dock = DockStyle.Fill;
+                webControl.TitleChanged += webControl_TitleChanged;
+                webControl.AddressChanged += webControl_AddressChanged;
+                webControl.KeyDown += webControl_KeyDown;
+                webControl.StatusMessage += webControl_Status;
+                webControl.LoadError += webControl_URLError;
 
-            search(url);
-            //search(url);
+                // Implement Custom LifeSpanHandler
+                webControl.LifeSpanHandler = myObject;
+
+                search(url);
+            }));
         }
         private async void webControl_URLError(object sender, LoadErrorEventArgs e)
         { 
@@ -395,9 +415,8 @@ namespace Powercore
 
         private void button5_Click(object sender, EventArgs e)
         {
-            about about = new about();
-            about.StartPosition = FormStartPosition.CenterScreen;
-            about.Show();
+
+            AddNewTab("@/powercore/about");
 
             qckmen.Visible = false;
             donttaptheglass = true;

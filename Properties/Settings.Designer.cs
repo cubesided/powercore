@@ -46,5 +46,17 @@ namespace Powercore.Properties {
                 this["newTabLocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool popups {
+            get {
+                return ((bool)(this["popups"]));
+            }
+            set {
+                this["popups"] = value;
+            }
+        }
     }
 }

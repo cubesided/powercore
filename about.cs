@@ -115,12 +115,12 @@ namespace Powercore
 
         private void about_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void about_Leave(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
     }
 }

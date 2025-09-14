@@ -132,6 +132,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="LifespanHandler.cs" />
+    <Compile Include="panels\browserPane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="panels\browserPane.Designer.cs">
+      <DependentUpon>browserPane.cs</DependentUpon>
+    </Compile>
     <Compile Include="panels\defaultPane.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="panels\browserPane.resx">
+      <DependentUpon>browserPane.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="panels\defaultPane.resx">
       <DependentUpon>defaultPane.cs</DependentUpon>
